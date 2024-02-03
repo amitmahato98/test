@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                    <!-- accesing element tag and class by dom -->
+<!--     
+    <p id="amit">Amiti</p>
+    <p class="mahato">Mahato</p>
+
+
+
+
+    <script>
+        var a = document.getElementById("amit").innerHTML;
+        document.write(a);
+        document.write('<br>');
+        var b = document.getElementsByClassName("mahato")[0].innerHTML;
+        document.write(b);
+        document.write('<br>');
+        var p = document.querySelector('p').innerHTML;
+        document.write(p);
+        // console.log(p);
+
+        document.write('<br>');
+
+
+    </script> -->
+<!-- 
+               creating tag and element using dom 
+    <p id="first" >paragaph-1</p>
+    <p id="third">paragaph-2</p>
+    <p id="second">claparagaph-3</p>
+    <p id="class4">paragaph-4</p>
+    <ul><li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li></ul>
+    <script>
+        var ptag = document.createElement('p');
+        var content = document.createTextNode('this paragraph is added from js');
+        ptag.appendChild(content);
+        console.log(ptag)
+        document.body.appendChild(ptag);
+
+
+        var list = document.querySelector("ul");
+        console.log(list.firstChild);
+        console.log(list.lastChild);
+        var bodi = list.parentNode;
+        console.log(bodi)
+        console.log(bodi.parentNode)
+
+        var bro1 = first.nextElementSibling;
+
+        console.log(bro1)
+
+    </script> -->
+
+    <div>
+        <h1 id="h1">hello world</h1>
+        <p id="ptag">HELLO WORLD</p>
+    </div>
+    <script>
+        document.getElementById('h1').style.color='green';
+        document.getElementById('ptag').setAttribute("style" , " background-color:orange;  color:white; ");
+        
+        
+
+    </script>
+</body>
+</html>

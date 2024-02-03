@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Calculator</h1>
+    <p>here you can calculate using two numbers that will be done like addition subtraction multiplication and division 
+    </p>
+    <h4>Note: here is a constant number 6 which is being used in very operation that you want to do your task</h4>
+    <form action="input">
+
+        <h2>enter your task to done is:</h2>
+        <ul>
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+        </ul>
+        <input type="text" name="" id="choices">
+        <button onclick="myfunction();">click here</button>
+    </form> -->
+
+    <script>
+        
+function myfunction(){
+    var choice = document.getElementById('choices').value;
+    document.write(choice);
+    switch(choice){
+        case "Addition" : var a = 30;
+                            a+=6;
+                          document.write("The addition is "+ a);
+                          break;
+                          
+        case "Subtraction" : var a = 30;
+                            a-=6;
+                          document.write("The Subtraction is "+ a);
+                          break;
+        case "Multiplication" : var a = 30;
+                            a*=6;
+                          document.write("The Multiplication is "+ a);
+                          break;
+        case "Division" : var a = 30;
+                            a/=6;
+                          document.write("The Divison is "+ a);
+                          break;
+
+        default: document.write("invalid input");
+                alert(choice +" is invalid input");
+    }
+}
+    // while loop example 1
+    var i=1;
+    while(i<=200){
+        document.write("I Love You Babe("+i);
+        document.write(" times)" );
+        i+= 1;
+        document.write("<br>");
+
+    }
+// -------------------------------------------------------------------------------------------------------------------
+    // while loop example 2
+    var i=19;
+     var j=1;
+    while(j<=200){
+        document.write("5 x " +j +" = " +i);
+        j++;
+        i+= 19;
+        document.write("<br>");
+
+    }
+// -----------------------------------------------------------------------------------------------------------------
+    // same task as while loop using for loop
+// .............................................................................................................
+ 
+    for(var a=1; a<=200; a++){
+        document.write("I Love You Babe("+a);
+        document.write(" times)" );
+        document.write("<br>");
+
+    }
+// ---------------------------------------------------------------------------------------------------------------
+    // same task as while loop using for loop
+for( var i=19;i<=191;i+=19){
+    document.write(i);
+    document.write("<br>");
+
+}
+    </script>
+</body>
+</html>
