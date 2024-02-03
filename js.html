@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="diva"><p>ckodsjfvionfrmsdfipvjnsiuodjntfpidsvs</p>
+    <button onclick="myfunc('diva')" type="button">clicka</button>
+</div> 
+    <div id="divb"><p>ckodsjfvionfrmsdfipvjnsiuodjntfpidsvs</p>
+    <button onclick="myfunc('divb')" type="button">clickb</button>
+</div> 
+    <div id="divc"><p>ckodsjfvionfrmsdfipvjnsiuodjnsdgtfyhu</p>
+    <button onclick="myfunc('divc')" type="button">clickc</button>
+</div> 
+    <div id="divd"><p>ckodsjfvionfrmsdfipvjnsiuodjntfpidsvs</p>
+    <button onclick="myfunc('divd')" type="button">clickd</button>
+</div> 
+    <div id="dive"><p>ckodsjfvionfrmsdfipvjnsiuodjntfpidsvs</p>
+    <button onclick="myfunc('dive')" type="button">clicke</button>
+</div> 
+
+
+    <script>
+      function myfunc(paravalue){
+        var backup = document.body.innerHTML;
+        var divcontent = document.getElementById(paravalue).innerHTML;
+        document.body.innerHTML = divcontent;
+        window.print();
+        document.body.innerHTML = backup;
+      }
+    </script>
+</body>
+</html>
