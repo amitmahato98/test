@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: self-start;
+            flex-direction: column;
+            cursor: pointer;
+            text-transform: capitalize;
+            /* border: 5px solid royalblue ; */
+            /* border-radius: 20px; */
+            /* background-color: #ff0000; */
+        }
+        
+    </style>
+</head>
+<body>
+
+
+
+    <h1>Demonstration of colors.</h1>
+<div>
+    <p onclick="bgwhite() ">white </p>
+    <p onclick="bgblack() ">black </p>
+    <p onclick="bggreen() ">green </p>
+    <p onclick="bgbrown() ">brown </p>
+    <p onclick="bgblue()  ">blue  </p>
+    <p onclick="bgpurple()">purple</p>
+    <p onclick="bgorange()">orange</p>
+    <p onclick="bgred()   ">red   </p>
+    <p onclick="bgyellow()">yellow</p>
+    <p onclick="bgviolet()">violet</p>
+    <p onclick="bgpink()  ">pink  </p>
+    <p onclick="bggrey()  ">grey  </p>
+
+</div>
+
+<script>
+    function bgblack(){
+        document.body.style.backgroundColor='black';
+        document.body.style.color='white'
+    }
+    function bggreen(){
+        document.body.style.backgroundColor='green';
+        document.body.style.color='black'
+    }
+    function bgbrown(){
+        document.body.style.backgroundColor='brown';
+        document.body.style.color='#f2f2f2'
+    }
+    function bgblue(){
+        document.body.style.backgroundColor='blue';
+        document.body.style.color='white'
+    }
+    function bgpurple(){
+        document.body.style.backgroundColor='purple';
+        document.body.style.color='white'
+    }
+    function bgorange(){
+        document.body.style.backgroundColor='orange';
+        document.body.style.color='black'
+    }
+    function bgred(){
+        document.body.style.backgroundColor='red';
+        document.body.style.color='black'
+    }
+    function bgyellow(){
+        document.body.style.backgroundColor='yellow';
+        document.body.style.color='red'
+    }
+    function bgwhite(){
+        document.body.style.backgroundColor='white';
+        document.body.style.color='black'
+    }
+    function bgviolet(){
+        document.body.style.backgroundColor='violet';
+        document.body.style.color='black'
+    }
+    function bgpink(){
+        document.body.style.backgroundColor='pink';
+        document.body.style.color='black'
+    }
+    function bggrey(){
+        document.body.style.backgroundColor='grey';
+        document.body.style.color='white'
+    }
+</script>
+</body>
+</html>
