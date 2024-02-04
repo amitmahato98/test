@@ -20,12 +20,16 @@
             /* border-radius: 20px; */
             /* background-color: #ff0000; */
         }
-        
+        button{
+            cursor: pointer;
+            border-radius: 5%;
+        }
     </style>
 </head>
 <body>
 
-        <!-- <h2 id="date" onclick="date()">Date:</h2> -->
+        <p id="time"></p>
+        <button onclick="clearInterval(clock)">Click To Stop Time</button>
 
     <h1>Demonstration of colors.</h1>
 <div>
@@ -41,15 +45,60 @@
     <p onclick="bgviolet()">violet</p>
     <p onclick="bgpink()  ">pink  </p>
     <p onclick="bggrey()  ">grey  </p>
-
+    
 </div>
 
 <script>
-    // var date = document.getElementById(date);
 
+    var clock = setInterval(clocktiming,1000);
+
+        function clocktiming(){
+            let n = new Date();
+        var time = n.toLocaleTimeString();
+        document.getElementById('time').innerHTML = time;
+            // document.write('Time is: '+time);
+        }
+    
     var d = new Date();
     document.write('Today`s date is: '+d);
+    document.write("<br>")
+    document.write("<br>")
     
+    var time = d.toLocaleTimeString()
+    document.write('Time is: '+time);
+    document.write("<br>")
+    document.write("<br>")
+    
+    var miti = d.toLocaleDateString()
+    document.write('Time is: '+miti);
+    document.write("<br>")
+    document.write("<br>")
+
+    var hour = d.getHours();
+    document.write('hour is: '+hour);
+    document.write("<br>")
+    
+    document.write("<br>")
+    var minutes = d.getMinutes();
+    document.write('minutes is: '+minutes);
+    document.write("<br>")
+    
+    document.write("<br>")
+    var seconds = d.getSeconds();
+    document.write('second is: '+seconds);
+    document.write("<br>")
+
+    document.write("<br>")
+    var getMilliseconds = d.getMilliseconds();
+    document.write('milisecond is: '+getMilliseconds);
+    document.write("<br>")
+    document.write("<br>")
+    
+
+
+
+
+
     function bgblack(){
         document.body.style.backgroundColor='black';
         document.body.style.color='white'
