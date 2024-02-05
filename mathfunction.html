@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right,rgb(71, 23, 23), rgb(49, 24, 77));
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: x-large;
+
+        }
+    </style>
 </head>
 <body>
     <p id="p1"></p>
@@ -12,6 +21,9 @@
     <p id="p4"></p>
     <p id="p5"></p>
     <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
     <script>
          var sqroot =(Math.sqrt(25));
         document.getElementById('p1').innerHTML = ('The square root of 25 is: '+sqroot);
@@ -30,6 +42,15 @@
 
          var absolute =(Math.abs(-123));
         document.getElementById('p6').innerHTML = ('The absolute value of -123 is: '+absolute);
+
+         var maximum =(Math.max(3,-9,8,7,2,11,5,8,52,5,2,53));
+        document.getElementById('p7').innerHTML = ('The maximam value of (3,-9,8,7,2,11,5,8,52,5,2,53) is: '+maximum);
+
+         var minimum =(Math.min(3,-9,8,7,2,11,5,8,52,5,2,53));
+        document.getElementById('p8').innerHTML = ('The minimum value of (3,-9,8,7,2,11,5,8,52,5,2,53) is: '+minimum);
+
+         var random =(Math.random());
+        document.getElementById('p9').innerHTML = ('The random value is: '+random);
 
     </script>
 </body>
