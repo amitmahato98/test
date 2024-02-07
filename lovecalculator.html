@@ -6,13 +6,16 @@
     <title>Love Calculator</title>
     <style>
         body{
+            margin-top: 7% ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0,0,0,0.5)), url(https://png.pngtree.com/background/20230612/original/pngtree-valentine-wallpaper-a-cute-couple-sitting-in-a-red-blanket-with-picture-image_3178580.jpg);
-            /* background-position: center; */
             background-repeat: no-repeat;
             background-size: 100vw 100vh;
-            position: absolute;
+            /* position: absolute;
             top: 15%;
-            left: 27%;
+            left: 27%; */
         }
         .header{
             background-color: #880808;
@@ -59,6 +62,7 @@
             padding: 0.5rem 0;
             color: white;
         }
+        
 
     </style>
 </head>
@@ -74,12 +78,12 @@
         </div>
         <div class="button"><button type="button" onclick="lovepercentage()">Click</button></div>
         <div class="lovepercentage" id="lovepercentage">
-            <input type="text" placeholder="Love Percentage" id="showlovepercent">
+            <input type="text" placeholder="Love Percentage" id="showlovepercent" disabled>
         </div>
     </form>
 </div>
-</div> 
 <div class="footer"> <h3>GOD BLESS YOUR RELATION SHIP</h3></div>
+</div> 
 
 <script>
     function lovepercentage(){
