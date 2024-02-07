@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverseString</title>
+</head>
+<body>
+    
+    <h1>Converting input data in reverse pattern immediatly</h1>
+    <input type="text" id="question" onkeyup="revesestring()">
+    <input type="text" id="answer">
+    <script>
+        function revesestring(){
+
+            var question = document.getElementById('question').value;
+            var answer = "";
+            for(var i= question.length -1; i>=0 ; i--){
+                answer += question[i];
+                document.getElementById('answer').value = answer;
+            }
+        }
+        
+    </script>
+</body>
+</html>
