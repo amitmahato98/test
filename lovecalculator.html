@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0,0,0,0.5)), url(https://png.pngtree.com/background/20230612/original/pngtree-valentine-wallpaper-a-cute-couple-sitting-in-a-red-blanket-with-picture-image_3178580.jpg);
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            position: absolute;
+            top: 15%;
+            left: 27%;
+        }
+        .header{
+            background-color: #880808;
+            padding: 0.5rem 0;
+            text-align: center;
+            color: white;
+        }
+        .content{
+            background-color: rgb(243, 240, 240);
+        }
+        .input{
+            padding: 2rem;
+        }
+        input{
+            font-size: 1.3rem;
+            padding: 0.4rem 0.1rem;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin-bottom: 1.5rem;
+           
+        }
+        button{
+            line-height: 1.5rem;
+            width: 50%;
+            background-color: #880808;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .lovepercentage{
+            padding-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 10vw; */
+        }
+        .footer{
+            background-color: #880808;
+            text-align: center;
+            padding: 0.5rem 0;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div>   
+<div class="header"><h1>LOVE  CALCULATOR</h1></div>
+<div class="content">
+    <form action="#">
+        <div class="input">
+            <input type="text" placeholder="Your name" required>
+            <span>  +  </span>
+            <input type="text" placeholder="Love Name" required>
+        </div>
+        <div class="button"><button type="button" onclick="lovepercentage()">Click</button></div>
+        <div class="lovepercentage" id="lovepercentage">
+            <input type="text" placeholder="Love Percentage" id="showlovepercent">
+        </div>
+    </form>
+</div>
+</div> 
+<div class="footer"> <h3>GOD BLESS YOUR RELATION SHIP</h3></div>
+
+<script>
+    function lovepercentage(){
+        var lovedata = (Math.random());
+        lovedata *= 100;
+        var lovepercentage = (Math.floor(lovedata));
+        document.getElementById('showlovepercent').value = lovepercentage + '%';
+   
+    }
+</script>
+
+</body>
+</html>
