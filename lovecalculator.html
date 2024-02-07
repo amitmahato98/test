@@ -35,19 +35,24 @@
         }
         .button{
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
-            
             margin-bottom: 1.5rem;
-           
+            
         }
         button{
+            border-radius: 5px;
             line-height: 1.5rem;
-            width: 50%;
+            width: 40%;
             background-color: #880808;
             color: white;
             font-size: 1.2rem;
             cursor: pointer;
+            border: 1px solid #880808;
+        }
+        button:hover{
+            background-color: transparent;
+            color: #880808;
         }
         .lovepercentage{
             padding-bottom: 1.5rem;
@@ -72,7 +77,7 @@
            }
 
            input{
-            width: 90vw;
+            width: 80vw;
         }
         span{
             margin: 0.5rem 0 0.5rem 52vw;
@@ -106,17 +111,20 @@
 <div class="content">
     <form action="">
         <div class="input">
-            <input type="text" placeholder="Your name" class="yourname" required>
+            <input type="text" placeholder="Your name" class="yourname" id="yourname" required>
             <span>  +  </span>
-            <input type="text" placeholder="Love Name" class="lovename" required>
+            <input type="text" placeholder="Love Name" class="lovename" id="lovename" required>
         </div>
-        <div class="button"><button type="button" onclick="lovepercentage()">Click</button></div>
+        <div class="button">
+            <button type="button" onclick="swap()" >Swap</button>
+            <button type="button" onclick="lovepercentage()">Click</button>
+        </div>
         <div class="lovepercentage" id="lovepercentage">
             <input type="text" placeholder="Love Percentage" id="showlovepercent" disabled>
         </div>
     </form>
 </div>
-<div class="footer"> <h3>GOD BLESS YOUR RELATIONSHIP</h3></div>
+<div class="footer"> <h3>VALENTINES DAY SPECIAL</h3></div>
 </div> 
 
 <script>
@@ -125,7 +133,17 @@
         lovedata *= 100;
         var lovepercentage = (Math.floor(lovedata));
         document.getElementById('showlovepercent').value = lovepercentage + '%';
-   
+    }
+    function swap(){
+        var yourname = document.getElementById('yourname');
+        var lovename = document.getElementById('lovename');
+        var temp = yourname.value;
+        yourname.value = lovename.value;
+        lovename.value = temp;
+        // console.log("success")
+        // document.getElementById('yourname').value = lovename;
+        // document.getElementById('lovename').value = yourname;
+
     }
 </script>
 
