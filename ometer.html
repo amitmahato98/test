@@ -5,80 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gay-o-meter</title>
     <style>
-        .circle{
-            height: 400px;
-            width: 400px;
-            border-radius: 50%;
-            /* background-color: aqua; */
-            border: 10px solid green;
-            /* border-bottom:5px solid red; */
-            position: fixed;
-        }
-        .circle2{
-            height: 250px;
-            width: 500px;
-            background-color: white;
-            position: fixed;
-            top: 222px;
-            left: -50px;
-        }
-        /* .line::after{w
-            display: block;
-            position: relative;
-         content: "";
-         background-color: black;
-         height: 10.5cm;
-         width: 5px;
-         left: 5.1cm;
-         
-        } */
         .line{
-            position: absolute;
+            position: relative;
             top: 200px;
             left: 200px;
             width: 200px;
             height: 5px;
             background-color: black;
-            transform: rotate('120deg');
+            /* transform: rotate('120deg'); */
             transform-origin: 0 center;
             animation: gayometer 3s linear 1 alternate forwards;
             /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
-        @keyframes gayometer{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(-180deg);
-            }
-        }
+        .semi-circle {
+  width: 400px; 
+  height: 200px; 
+  /* border-radius: 50%; */
+  border: 5px solid #000; 
+  border-radius: 200px 200px 0 0; 
+  border-bottom: none; 
+}
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div class="circle" >
-            <div class="line" id="line">
+     <div>
+        <div class="semi-circle">
+            <div class="line" id="line"></div>
 
-            </div>
-            <div class="circle2"></div>
         </div>
+        <button type="button" id="button" onclick="gaycheck()"> click </button>
     </div>
-    <button type="button" onclick="checkgay()">click</button>
     <script>
-        function checkgay(){
-
-            var line = document.getElementById('line');
+        
+        function gaycheck(){
             var randomnumber = (Math.random()* 181);
             var randomvalue = (Math.floor(randomnumber));
-            console.log(randomnumber)
-            console.log(randomvalue)
-            var degree = '-'+  randomvalue + 'deg';
+            
+            var degree = '-'+  randomvalue+'deg';
             console.log(degree);
-
-            // document.getElementById('line').setAttribute('style','
-            // ')
-
+            
+            var line = document.getElementById('line');
+                line.style.rotate = degree;
+           
+            
         }
+    // }
+
+    
+        
 
     </script>
 </body>

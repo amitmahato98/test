@@ -61,6 +61,9 @@
             align-items: center;
             /* width: 10vw; */
         }
+        .lovepercentage input{
+            width: 35vw;
+        }
         .footer{
             background-color: #880808;
             text-align: center;
@@ -87,8 +90,11 @@
         } */
         .lovepercentage{
             padding-left: 2rem;
-            width: 90vw;
+            /* width: 90vw; */
             
+           }
+           .lovepercentage input{
+            width: 85vw;
            }
            
            /* .input{
@@ -132,7 +138,16 @@
         var lovedata = (Math.random());
         lovedata *= 100;
         var lovepercentage = (Math.floor(lovedata));
-        document.getElementById('showlovepercent').value = lovepercentage + '%';
+
+        if(lovepercentage <= 49){
+            var lovenameval = document.getElementById('lovename').value;
+            var yournameval = document.getElementById('yourname').value;
+
+            document.getElementById('showlovepercent').value = lovenameval +' is loving '+ yournameval +' as friend';
+        }else{
+
+            document.getElementById('showlovepercent').value = lovepercentage + '%';
+        }
     }
     function swap(){
         var yourname = document.getElementById('yourname');
@@ -140,10 +155,6 @@
         var temp = yourname.value;
         yourname.value = lovename.value;
         lovename.value = temp;
-        // console.log("success")
-        // document.getElementById('yourname').value = lovename;
-        // document.getElementById('lovename').value = yourname;
-
     }
 </script>
 
