@@ -39,10 +39,9 @@
             width: 200px;
             height: 5px;
             background-color: black;
-            /* transform: rotate('120deg'); */
-            /* transform: scaleX(1); */
+            transform: rotate('120deg');
             transform-origin: 0 center;
-            animation: gayometer 3s linear 1 forwards;
+            animation: gayometer 3s linear 1 alternate forwards;
             /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
         @keyframes gayometer{
@@ -66,19 +65,20 @@
     </div>
     <button type="button" onclick="checkgay()">click</button>
     <script>
-        // function checkgay(){
+        function checkgay(){
 
             var line = document.getElementById('line');
             var randomnumber = (Math.random()* 181);
             var randomvalue = (Math.floor(randomnumber));
             console.log(randomnumber)
             console.log(randomvalue)
-            var degree = randomvalue + 'deg';
-            console.log(degree)
+            var degree = '-'+  randomvalue + 'deg';
+            console.log(degree);
+
             // document.getElementById('line').setAttribute('style','
             // ')
 
-        // }
+        }
 
     </script>
 </body>
