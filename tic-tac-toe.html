@@ -70,17 +70,20 @@
     var winner;
     function clickfun(e){
         if(winner = check()){
-            alert('winner found');
+            alert('player '+winner+' won the game');
             location.reload();
         }
         if(player % 2 != 0){
             e.value = "x";
             player++;
+            // e.value.disabled() = true;
         }else{
             e.value = "o"
             player++;
-            
+            // e.value.disabled() = true;
         }
+        // e.value.disabled() = true;
+        e.disabled = true;
     }
     function check(){
         var d1 = document.getElementById('div1').value;
