@@ -69,21 +69,24 @@
     var player=1;
     var winner;
     function clickfun(e){
-        if(winner = check()){
-            alert('player '+winner+' won the game');
-            location.reload();
-        }
+        // if(winner = check()){
+        //     alert('player '+winner+' won the game');
+        //     location.reload();
+        // }
+        e.disabled = true;
         if(player % 2 != 0){
             e.value = "x";
             player++;
-            // e.value.disabled() = true;
         }else{
             e.value = "o"
             player++;
-            // e.value.disabled() = true;
         }
-        // e.value.disabled() = true;
-        e.disabled = true;
+        if(winner = check()){
+            setTimeout(() =>{
+                alert('player '+winner+' is the winner of the game')
+                location.reload();
+            },50)
+        }
     }
     function check(){
         var d1 = document.getElementById('div1').value;
