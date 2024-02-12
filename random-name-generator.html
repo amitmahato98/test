@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random-name-generator</title>
+</head>
+<body>
+
+    <h1>welcome to the magical world my dear friend</h1>
+    
+    
+
+
+    <script>
+        let first,second;
+        let random = Math.random();
+        if(random < 0.25){
+            first = 'sabjiwali';
+        }else if(random < 0.50 && random >= 0.25){
+            first = 'dudhwali';
+        }else if(random < 0.75 && random >= 0.50){
+            first = 'bibhuti';
+        }else{
+            first = 'Swechchha';
+        }
+        
+        
+        
+         random = Math.random();
+        if(random < 0.25){
+            second = 'Sushant';
+        }else if(random < 0.50 && random >= 0.25){
+            second = 'jivan';
+        }else if(random < 0.75 && random >= 0.50){
+            second = 'Mandip';
+        }else{
+            second = 'Amit';
+        }
+
+
+
+        console.log( `${first}`+' + '+` ${second}` )
+         
+        </script>
+</body>
+</html>
